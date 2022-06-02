@@ -64,7 +64,7 @@ const aliens = {
         'interestingFact': 'Some Trill are willin hosts to a long-lived invertibrate symbiote that merges with the host to create a distinct personality.' ,
         'notableExamples' : "Jadzia Dax, Ezri Dax, Curzon Dax",
         'image': 'https://static.wikia.nocookie.net/aliens/images/4/42/EzriDax.jpg'
-    }
+    },
 }
 
 
