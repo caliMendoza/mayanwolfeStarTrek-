@@ -1,5 +1,5 @@
 
-document.getElementById('button').addEventListener('click', apiRequest())
+document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
 
@@ -7,7 +7,7 @@ async function apiRequest(){
 
     try{
     const response = await fetch(`https://mayanwolfe-startrek-api.herokuapp.com/api/${alienName}`)
-    const data = await response.json(alienName)
+    const data = await response.json()
     console.log(data)
     } catch(error) {
 
