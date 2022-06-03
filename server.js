@@ -64,18 +64,18 @@ const aliens = {
         'interestingFact': 'Some Trill are willin hosts to a long-lived invertibrate symbiote that merges with the host to create a distinct personality.' ,
         'notableExamples' : "Jadzia Dax, Ezri Dax, Curzon Dax",
         'image': 'https://static.wikia.nocookie.net/aliens/images/4/42/EzriDax.jpg'
-    },
+    }
 }
 
 
 app.get('/', (request, response) => {
-    response.sendfile(__dirname + '/index.html')
+    response.sendFile(__dirname + '/index.html')
 })
 
 app.get('/api/:alienName', (request, response) => {
     const aliensName = request.params.alienName.toLowerCase()
 
-    if(aliens[aliensname]){
+    if(aliens[aliensName]){
         response.json(aliens[aliensName])
     } else{
         response.json(aliens['humans'])
@@ -83,5 +83,5 @@ app.get('/api/:alienName', (request, response) => {
 })
 
 app.listen(process.env.PORT || PORT, () => {
-    console.log('Server is running')
+    console.log(`Server is now running on ${PORT}! Better go catch it`)
 })
